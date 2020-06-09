@@ -2,7 +2,10 @@ const vscode = require('vscode');
 
 const reg = /\/([^/]*?).js$/
 
-//弃用
+/**
+ * 因简单命令不支持传递参数，弃用
+ */
+
 module.exports = function (context) {
     let handler = vscode.commands.registerCommand('extension.copyPath', (uri) => {
         let path = uri.path;      
